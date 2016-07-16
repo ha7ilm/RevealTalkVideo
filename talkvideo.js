@@ -17,11 +17,12 @@ Used code sample from: https://developers.google.com/youtube/iframe_api_referenc
 */
 
 /*
-
 //How Reveal.js plugis work?
 They use another design pattern for object oriented Javascript:
 
 var MyClassInstance = window.MyClassInstance = (function(){
+    //Starting with this, we alter scope: variables within will not be visible outside.
+    //It is similar to putting a pair of {} in C.
 
     var privateVariable;
     var exposedVariable;
@@ -36,7 +37,7 @@ var MyClassInstance = window.MyClassInstance = (function(){
 })();
 */
 
-var RevealTalkVideo = (()=>{ //we alter scope this way, just like putting a pair of {} in C
+var RevealTalkVideo = (()=>{
 
     //local variables:
     var newSlideTimeMap = [];
