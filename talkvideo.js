@@ -118,7 +118,7 @@ var RevealTalkVideo = (()=>{
       ytplayer = new YT.Player('youtube-in-corner-player', {
         width: cfg.playerWidth.toString(),
         height: cfg.playerHeight.toString(),
-        videoId: 'fgFto-Oj-uw',
+        videoId: cfg.youtubeVideoId,
         events: {
           'onReady': onPlayerReady,
           'onStateChange': () => {goToCurrentSlideInReveal();} //function inside does not have event argument
