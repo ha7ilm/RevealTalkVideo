@@ -68,7 +68,7 @@ Also open the browser console (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> in 
 
 Start playing the video of the talk.
 
-As the video advances and you change slides in it, press the <kbd>R</kbd> button, to record this event. This will also change the slides in Reveal.
+As the video advances and the slides are changed in it, press the <kbd>R</kbd> button to record this event. This will also change the slides in the current Reveal slideshow.
 
 Don't worry, you can undo the last recorded move by pressing <kbd>U</kbd>.
 
