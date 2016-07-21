@@ -115,7 +115,7 @@ var RevealTalkVideo = (()=>{
     // This function creates an <iframe> (and YouTube player) the API code downloads.
     function onYouTubeIframeAPIReady()
     {
-      ytplayer = new YT.Player('youtube-in-corner-player', {
+      ytplayer = new YT.Player('reveal-talkvideo-player', {
         width: cfg.playerWidth.toString(),
         height: cfg.playerHeight.toString(),
         videoId: cfg.youtubeVideoId,
