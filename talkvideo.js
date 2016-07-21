@@ -72,7 +72,7 @@ var RevealTalkVideo = (()=>{
           {
               console.log("RevealTalkVideo :: goToSlideInYT, YT => : ", x );
               ytplayer.seekTo(x.time);
-              if(!videoAlreadyStarted && (!( (cfg.playerAutoStart)&&!(cfg.playerAutoStartOnlyOnFirstSlide) ))) ytplayer.pauseVideo();
+              if(ytWindowHidden || (!videoAlreadyStarted && (!( (cfg.playerAutoStart)&&!(cfg.playerAutoStartOnlyOnFirstSlide) )))) ytplayer.pauseVideo();
               disableRevealSeekTimeouts = 3;
               goToCurrentSlideInReveal(true, x.time);
               //console.log("it is", ytPlayerCurrentSlideIndex, ytplayer.getCurrentTime(), x.time);
@@ -133,7 +133,7 @@ var RevealTalkVideo = (()=>{
         //else we wait for the user to start the video playback.
         if(Reveal.getState().indexh==0 && Reveal.getState().indexv==0)
         {
-            if(cfg.playerAutoStart) event.target.playVideo();
+            if(cfg.playerAutoStart && !ytWindowHidden) event.target.playVideo();
         }
         else goToSlideInYT(Reveal.getState().indexh,Reveal.getState().indexv);
 
@@ -149,13 +149,13 @@ var RevealTalkVideo = (()=>{
         }, 100);
     }
 
+    var ytWindowHidden = false;
+
     function ytWindowResize()
     {
-        if(document.body.clientWidth<cfg.playerWidth*2 || document.body.clientHeight<cfg.playerHeight*2) { ytplayer.getIframe().style.display="none"; }
-        else if(ytplayer.getIframe().style.display) ytplayer.getIframe().style.display="";
+        if(document.body.clientWidth<cfg.playerWidth*2 || document.body.clientHeight<cfg.playerHeight*2) { ytplayer.getIframe().style.display="none"; ytWindowHidden = true; }
+        else if(ytplayer.getIframe().style.display) { ytplayer.getIframe().style.display=""; ytWindowHidden = false; }
     }
-
-
 
     return({
         //public variables and functions
