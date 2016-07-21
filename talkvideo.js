@@ -82,7 +82,7 @@ var RevealTalkVideo = (()=>{
 
     function goToCurrentSlideInReveal(onlyUpdateIndex, currentYtTime) //second parameter is needed because when the video is seeked, it does not update ytplayer.getCurrentTime right then
     {
-      if(!ytplayer||!slideTimeMap) return;
+      if(!ytplayer||!slideTimeMap||!slideTimeMap.length) return;
       onlyUpdateIndex = (onlyUpdateIndex == undefined) ? false : onlyUpdateIndex;
       currentYtTime = (currentYtTime == undefined) ? ytplayer.getCurrentTime() : currentYtTime;
       var revealSlideNow = 0; //what if it is the first slide
