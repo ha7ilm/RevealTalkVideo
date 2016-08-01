@@ -101,3 +101,9 @@ Replace `slideTimeMap` in your HTML code with this new one.
 From now on the Reveal.js presentation and the video of your talk will be in sync.
 
 > On mobile devices, the YouTube video will be hidden.
+
+----
+
+Check this repository if you want to quickly try this plugin:
+
+https://github.com/ha7ilm/RevealTalkVideoTest
