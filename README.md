@@ -48,7 +48,7 @@ var slideTimeMap =
 </script>
 ```
 
-...and add this code to the end of your HTML:
+...and add this code to the end of your &lt;body&gt; tag:
 ```html
 <style>
 .reveal-talkvideo iframe {
