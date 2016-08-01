@@ -8,6 +8,14 @@ The video of your talk will play in the corner of the presentation:
 
 Using pre-recorded keyframes, the presentation and the video will be synchronized: moving around in the video will change slides, and moving around in the slides will seek in the video.
 
+## Demo
+
+<a href="http://blog.sdr.hu/repos/Friedrichshafen-SDRA-2016-Talk-And-Paper/slides/index.html">Here</a> is a demo for *RevealTalkVideo*.
+
+Also you can check the <a href="https://github.com/ha7ilm/RevealTalkVideoTest">RevealTalkVideoTest</a> repository to quickly try this plugin.
+
+## Howto
+
 To insert RevealTalkVideo into your Reveal.js presentation:
 
 ```bash
@@ -101,9 +109,3 @@ Replace `slideTimeMap` in your HTML code with this new one.
 From now on the Reveal.js presentation and the video of your talk will be in sync.
 
 > On mobile devices, the YouTube video will be hidden.
-
-----
-
-Check this repository if you want to quickly try this plugin:
-
-https://github.com/ha7ilm/RevealTalkVideoTest
