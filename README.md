@@ -20,6 +20,7 @@ Now open your HTML file, and make your Reveal.js initialization look like this:
 
 ```html
 <script src="js/reveal.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 
 var slideTimeMap =
